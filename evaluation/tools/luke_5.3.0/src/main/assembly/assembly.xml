@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<assembly>
+    <id>luke-release</id>
+    <formats>
+        <format>tar.gz</format>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <includes>
+                <include>luke.sh</include>
+                <include>luke.bat</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>target</directory>
+            <outputDirectory>target</outputDirectory>
+            <includes>
+                <include>luke-with-deps.jar</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>
