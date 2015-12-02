@@ -27,7 +27,7 @@ signal "Running STAN Unit Tests"
 java -cp .:'stan.jar' org.junit.runner.JUnitCore it.disco.unimib.stan.unit.TestSuite
 signal "Done"
 
-if [[ $1 != -skip-regression-tests ]]
+if [[ $1 == -regression-tests ]]
 then
 	signal "Running Regression Tests for DBPedia"
 	java -Xms256m -Xmx3000m -cp .:'stan.jar' org.junit.runner.JUnitCore it.disco.unimib.labeller.regression.DBPediaRegressionTest
