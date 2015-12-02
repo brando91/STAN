@@ -1,5 +1,3 @@
-sudo: required
-
 script:
   - ./build-and-test.sh
 
