@@ -5,6 +5,7 @@ import it.disco.unimib.labeller.benchmark.Command;
 import it.disco.unimib.labeller.benchmark.GoldStandard;
 import it.disco.unimib.labeller.benchmark.GoldStandardFacet;
 import it.disco.unimib.labeller.index.InputFile;
+import it.disco.unimib.stan.core.EvaluationPaths;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -127,7 +128,7 @@ public class AnalizeEvaluationResults {
 		qrels.put("dbpedia-with-labels", "dbpedia-enhanced-with-labels.qrels");
 		qrels.put("yago1", "yago1-enhanced.qrels");
 		qrels.put("yago1-simple", "yago1-simple.qrels");
-		return "../evaluation/gold-standards/" + qrels.get(knowledgeBase);
+		return new EvaluationPaths().path() + "/gold-standards/" + qrels.get(knowledgeBase);
 	}
 	
 	private static String resultDirectory(String knowledgeBase){
@@ -137,7 +138,7 @@ public class AnalizeEvaluationResults {
 		qrels.put("dbpedia-with-labels", "dbpedia-with-labels-results/");
 		qrels.put("yago1", "yago1-results/");
 		qrels.put("yago1-simple", "yago1-simple-results/");
-		return "../evaluation/results/" + qrels.get(knowledgeBase);
+		return new EvaluationPaths().results(qrels.get(knowledgeBase)).path();
 	}
 }
 

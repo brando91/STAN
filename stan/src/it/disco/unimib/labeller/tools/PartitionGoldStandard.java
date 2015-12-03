@@ -5,6 +5,7 @@ import it.disco.unimib.labeller.benchmark.Command;
 import it.disco.unimib.labeller.benchmark.GoldStandard;
 import it.disco.unimib.labeller.benchmark.GoldStandardFacet;
 import it.disco.unimib.labeller.index.InputFile;
+import it.disco.unimib.stan.core.EvaluationPaths;
 
 import java.io.File;
 import java.util.HashMap;
@@ -49,6 +50,6 @@ public class PartitionGoldStandard {
 		qrels.put("dbpedia-with-labels", "dbpedia-with-labels.qrels");
 		qrels.put("yago1", "yago1-enhanced.qrels");
 		qrels.put("yago1-simple", "yago1-simple.qrels");
-		return "../evaluation/gold-standards/" + qrels.get(knowledgeBase);
+		return new EvaluationPaths().path() + "/gold-standards/" + qrels.get(knowledgeBase);
 	}
 }

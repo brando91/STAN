@@ -8,7 +8,6 @@ import it.disco.unimib.labeller.index.SimilarityMetric;
 import it.disco.unimib.labeller.properties.AnnotationAlgorithm;
 import it.disco.unimib.labeller.properties.DatasetSummary;
 import it.disco.unimib.labeller.properties.DomainAndRangeConsistency;
-import it.disco.unimib.labeller.unit.InputFileTestDouble;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,7 +23,7 @@ public class AlgorithmConfiguration {
 	private EvaluationResources resources;
 	
 	public AlgorithmConfiguration() {
-		this.resources = new EvaluationResources().evaluationPath("../cluster-labelling/evaluation");
+		this.resources = new EvaluationResources();
 	}
 
 	public AlgorithmConfiguration setKnowledgeBase(String kb) {
@@ -45,12 +44,7 @@ public class AlgorithmConfiguration {
 	}
 	
 	public Directory directory() throws IOException {
-		String path = resources.indexPath(kb);
-		if(testEnvironment()) path = new IndexesPath().labellingTest().path();
-		if(ecommerceEnvironment()) path = new IndexesPath().labelling("ecommerce").path();
-		if(ecommerceEvaluationEnvironment()) path = new IndexesPath().labelling("evaluation").path();
-
-		return new NIOFSDirectory(new File(path).toPath());
+		return new NIOFSDirectory(new File(resources.indexPath(kb)).toPath());
 	}
 	
 	public SimilarityMetric similarity() throws Exception {
@@ -62,31 +56,14 @@ public class AlgorithmConfiguration {
 	}
 
 	private DatasetSummary rangeSummaries() throws Exception {
-		if(testEnvironment()) return new DatasetSummary();
-		if(ecommerceEnvironment() || ecommerceEvaluationEnvironment()) return resources.summaryFrom(new IndexesPath().ecommerceRanges().path());
 		return resources.rangeSummariesFrom(kb);
 	}
 
 	private DatasetSummary domainSummaries() throws Exception {
-		if(testEnvironment()) return new DatasetSummary();
-		if(ecommerceEnvironment() || ecommerceEvaluationEnvironment()) return resources.summaryFrom(new IndexesPath().ecommerceDomains().path());
 		return resources.domainSummariesFrom(kb);
 	}
 
 	private ScaledDepths types() throws Exception {
-		if(testEnvironment() || ecommerceEnvironment() || ecommerceEvaluationEnvironment()) return new ScaledDepths(new InputFileTestDouble());
-		else return resources.hierarchyFrom(kb);
-	}
-
-	private boolean testEnvironment() {
-		return kb.equals("test");
-	}
-	
-	private boolean ecommerceEnvironment() {
-		return kb.equals("ecommerce");
-	}
-	
-	private boolean ecommerceEvaluationEnvironment() {
-		return kb.equals("ecommerce-evaluation");
+		return resources.hierarchyFrom(kb);
 	}
 }

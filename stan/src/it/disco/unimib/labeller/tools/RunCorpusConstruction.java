@@ -8,6 +8,7 @@ import it.disco.unimib.labeller.index.AcceptAll;
 import it.disco.unimib.labeller.index.EntityValues;
 import it.disco.unimib.labeller.index.InputFile;
 import it.disco.unimib.labeller.index.Triples;
+import it.disco.unimib.stan.core.EvaluationPaths;
 
 import java.io.File;
 import java.util.concurrent.ExecutorService;
@@ -37,11 +38,11 @@ class RunCorpusConstruction{
 		
 		System.out.println("Building corpus for dataset " + source + " in " + target + " using " + typesDirectory + " and " + labelsDirectory + " with stemming=" + stemming);
 		
-		final EntityValues types = new EntityValues(new NIOFSDirectory(new File("../evaluation/labeller-indexes/" + typesDirectory).toPath()));
-		final EntityValues labels = new EntityValues(new NIOFSDirectory(new File("../evaluation/labeller-indexes/" + labelsDirectory).toPath()));
+		final EntityValues types = new EntityValues(new NIOFSDirectory(new File(new EvaluationPaths().indexes().path() + "/" + typesDirectory).toPath()));
+		final EntityValues labels = new EntityValues(new NIOFSDirectory(new File(new EvaluationPaths().indexes().path() + "/" + labelsDirectory).toPath()));
 		
 		ExecutorService executor = Executors.newFixedThreadPool(concurrentThreads);
-		for(final File file : new File("../evaluation/" + source).listFiles()){
+		for(final File file : new File(new EvaluationPaths().path() + "/" + source).listFiles()){
 			executor.execute(new Runnable() {
 				@Override
 				public void run() {

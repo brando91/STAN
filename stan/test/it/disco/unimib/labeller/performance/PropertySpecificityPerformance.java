@@ -8,6 +8,7 @@ import it.disco.unimib.labeller.index.SimilarityMetricWrapper;
 import it.disco.unimib.labeller.properties.PropertyContextSpecificity;
 import it.disco.unimib.labeller.properties.PropertyTypesConditionalEntropy;
 import it.disco.unimib.labeller.properties.Specificity;
+import it.disco.unimib.stan.core.EvaluationPaths;
 
 import java.io.File;
 import java.util.List;
@@ -32,7 +33,7 @@ public class PropertySpecificityPerformance extends AbstractBenchmark {
 	Exception{
 		fields = new IndexFields("dbpedia");
 		evidence = new ContextualizedEvidence(
-							new NIOFSDirectory(new File("../evaluation/labeller-indexes/dbpedia/properties").toPath()), 
+							new NIOFSDirectory(new File(new EvaluationPaths().indexes().dbpedia().properties().path()).toPath()), 
 							new SimilarityMetricWrapper(new JaccardSimilarity()), 
 							fields);
 	}

@@ -8,6 +8,7 @@ import it.disco.unimib.labeller.index.IndexFields;
 import it.disco.unimib.labeller.index.InputFile;
 import it.disco.unimib.labeller.index.Triples;
 import it.disco.unimib.labeller.index.TypeHierarchy;
+import it.disco.unimib.stan.core.EvaluationPaths;
 
 import java.io.File;
 import java.util.concurrent.ExecutorService;
@@ -26,16 +27,16 @@ public class RunPropertyValuesIndexing {
 		String hierarchy = args[5];
 		String knowledgeBase = propertiesDirectory.split("/")[0];
 		
-		EntityValues types = new EntityValues(new NIOFSDirectory(new File("../evaluation/labeller-indexes/" + typesDirectory).toPath()));
-		EntityValues labels = new EntityValues(new NIOFSDirectory(new File("../evaluation/labeller-indexes/" + labelsDirectory).toPath()));
+		EntityValues types = new EntityValues(new NIOFSDirectory(new File(new EvaluationPaths().indexes().path() + "/" + typesDirectory).toPath()));
+		EntityValues labels = new EntityValues(new NIOFSDirectory(new File(new EvaluationPaths().indexes().path() + "/" + labelsDirectory).toPath()));
 		
-		final Evidence properties = new Evidence(new NIOFSDirectory(new File("../evaluation/labeller-indexes/" + propertiesDirectory).toPath()),
-															new TypeHierarchy(new InputFile(new File("../evaluation/" + hierarchy))),
+		final Evidence properties = new Evidence(new NIOFSDirectory(new File(new EvaluationPaths().indexes().path() + "/" + propertiesDirectory).toPath()),
+															new TypeHierarchy(new InputFile(new File(new EvaluationPaths().path() + "/" + hierarchy))),
 															types, 
 															labels,
 															new IndexFields(knowledgeBase));
 		ExecutorService executor = Executors.newFixedThreadPool(concurrentThreads);
-		for(final File file : new File("../evaluation/" + source).listFiles()){
+		for(final File file : new File(new EvaluationPaths().path() + "/" + source).listFiles()){
 			executor.execute(new Runnable() {
 				@Override
 				public void run() {

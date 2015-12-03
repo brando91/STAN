@@ -3,6 +3,7 @@ package it.disco.unimib.labeller.tools;
 import it.disco.unimib.labeller.benchmark.GoldStandardFacet;
 import it.disco.unimib.labeller.benchmark.UnorderedFacets;
 import it.disco.unimib.labeller.index.InputFile;
+import it.disco.unimib.stan.core.EvaluationPaths;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -15,8 +16,8 @@ public class GoldStandardSummary {
 
 	public static void main(String[] args) throws Exception {
 		
-		String qRelsPath = "../evaluation/gold-standards/yago1-simple.qrels";
-		String goldStandardPath = "../evaluation/gold-standards/yago1-simple";
+		String qRelsPath = new EvaluationPaths().path() + "/gold-standards/yago1-simple.qrels";
+		String goldStandardPath = new EvaluationPaths().goldStandard("yago1-simple").path();
 
 		UnorderedFacets groups = new UnorderedFacets(new File(goldStandardPath));
 		HashMap<String, GoldStandardFacet> names = new HashMap<String, GoldStandardFacet>();

@@ -4,6 +4,7 @@ import it.disco.unimib.labeller.index.EntityValues;
 import it.disco.unimib.labeller.index.InputFile;
 import it.disco.unimib.labeller.index.MatchingProperty;
 import it.disco.unimib.labeller.index.Triples;
+import it.disco.unimib.stan.core.EvaluationPaths;
 
 import java.io.File;
 
@@ -16,8 +17,8 @@ public class RunKeyValueIndexing {
 		String destination = args[1];
 		String property = args[2];
 		
-		EntityValues index = new EntityValues(new SimpleFSDirectory(new File("../evaluation/labeller-indexes/" + destination).toPath()));
-		for(File file : new File("../evaluation/" + source).listFiles()){
+		EntityValues index = new EntityValues(new SimpleFSDirectory(new File(new EvaluationPaths().indexes().path() + "/" + destination).toPath()));
+		for(File file : new File(new EvaluationPaths().path() + "/" + source).listFiles()){
 			System.out.println("processing " + file);
 			new Triples(new InputFile(file)).fill(index, new MatchingProperty(property));
 		}

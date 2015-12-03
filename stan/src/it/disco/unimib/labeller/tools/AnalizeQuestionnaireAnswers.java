@@ -1,6 +1,7 @@
 package it.disco.unimib.labeller.tools;
 
 import it.disco.unimib.labeller.index.CandidateProperty;
+import it.disco.unimib.stan.core.EvaluationPaths;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ import org.jopendocument.dom.spreadsheet.SpreadSheet;
 public class AnalizeQuestionnaireAnswers {
 
 	public static void main(String[] args) throws Exception {
-		String questionnaire = "../evaluation/gold-standards/questionnaires/questionnaire-ALL.ods";
+		String questionnaire = new EvaluationPaths().path() + "/gold-standards/questionnaires/questionnaire-ALL.ods";
 		SpreadSheet document = SpreadSheet.createFromFile(new File(questionnaire));
 		ArrayList<String> sheets = new ArrayList<String>();
 		for(int i = 0; i < document.getSheetCount(); i++){

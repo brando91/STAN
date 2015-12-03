@@ -1,5 +1,7 @@
 package it.disco.unimib.labeller.tools;
 
+import it.disco.unimib.stan.core.EvaluationPaths;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,7 +14,7 @@ import org.jopendocument.dom.spreadsheet.SpreadSheet;
 
 public class InterUserAgreement {
 	public static void main(String[] args) throws Exception {
-		String file = "../evaluation/gold-standards/questionnaires/questionnaire-ALL.ods";
+		String file = new EvaluationPaths().path() + "/gold-standards/questionnaires/questionnaire-ALL.ods";
 		List<HashMap<Long, List<Double>>> ratings = getAllRatingsFrom(SpreadSheet.createFromFile(new File(file)));
 		
 		DescriptiveStatistics spearmanStatistic = new DescriptiveStatistics();
