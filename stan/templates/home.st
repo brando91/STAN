@@ -29,6 +29,7 @@ home(notifications, hasPrevious, content) ::= <<
                   <li class="active"><a href="#">Home</a></li>
                   $if(hasPrevious)$<li><a href="/annotation">Resume</a></li>$endif$
                   <li><a href="/start">New Project</a></li>
+                  <li><a href="https://github.com/brando91/STAN" target="_blank">Source code</a></li>
                 </ul>
               </nav>
             </div>
@@ -48,7 +49,7 @@ home(notifications, hasPrevious, content) ::= <<
 
           <div class="mastfoot">
             <div class="inner">
-              <p>Semantic Table Annotation Tool © 2015</p>
+              <p>Semantic Table Annotation Tool © 2015 | Free source at <a href="https://github.com/brando91/STAN" target="_blank"><img src="/assets/img/github.png"></a></p>
             </div>
           </div>
 
