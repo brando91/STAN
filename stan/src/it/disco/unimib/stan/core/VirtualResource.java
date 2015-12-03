@@ -1,7 +1,5 @@
 package it.disco.unimib.stan.core;
 
-import it.disco.unimib.stan.experiments.DataPaths;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -32,7 +30,7 @@ public class VirtualResource implements Resource{
 	
 	@Override
 	public LineIterator lineIterator(String encoding) throws IOException {
-		File file = new File(new DataPaths().test().file(UUID.randomUUID().toString()).path());
+		File file = new File(new TempPath().file(UUID.randomUUID().toString()).path());
 		FileUtils.writeLines(file, encoding, this.lines);
 		return FileUtils.lineIterator(file, encoding);
 	}

@@ -5,9 +5,9 @@ import it.disco.unimib.stan.core.CSVTable;
 import it.disco.unimib.stan.core.Column;
 import it.disco.unimib.stan.core.FileResource;
 import it.disco.unimib.stan.core.Json;
+import it.disco.unimib.stan.core.ReservoirSampling;
 import it.disco.unimib.stan.core.StanAnnotator;
 import it.disco.unimib.stan.core.WorkingAreaPaths;
-import it.disco.unimib.stan.experiments.ReservoirSampling;
 
 import java.util.ArrayList;
 import java.util.List;

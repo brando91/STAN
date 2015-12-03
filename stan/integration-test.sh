@@ -10,4 +10,4 @@ root=`cd $relative_path;pwd`
 cd $root
 
 signal "Running Integration Tests"
-java -cp .:'stan.jar' org.junit.runner.JUnitCore integration.IntegrationTestSuite
+java -cp .:'stan.jar' org.junit.runner.JUnitCore it.disco.unimib.stan.integration.IntegrationTestSuite

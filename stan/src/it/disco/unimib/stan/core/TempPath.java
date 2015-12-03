@@ -11,4 +11,9 @@ public class TempPath {
 	public String path() {
 		return this.path;
 	}
+
+	public TempPath file(String file) {
+		this.path += file;
+		return this;
+	}
 }

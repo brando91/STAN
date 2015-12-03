@@ -1,4 +1,4 @@
-package it.disco.unimib.stan.experiments;
+package it.disco.unimib.stan.core;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -3,7 +3,7 @@ package it.disco.unimib.stan.unit;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.not;
 import static org.junit.Assert.assertThat;
-import it.disco.unimib.stan.experiments.ReservoirSampling;
+import it.disco.unimib.stan.core.ReservoirSampling;
 
 import java.util.ArrayList;
 import java.util.HashMap;
