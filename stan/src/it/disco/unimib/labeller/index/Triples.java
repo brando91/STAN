@@ -1,6 +1,6 @@
 package it.disco.unimib.labeller.index;
 
-import it.disco.unimib.labeller.benchmark.Events;
+import it.disco.unimib.stan.core.LogEvents;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -25,7 +25,7 @@ public class Triples {
 		int skippedLines = 0;
 		while(lines.hasNext()){
 			if(processedLines % 100000 == 0){
-				Events.verbose().debug("processed " + processedLines + " lines of file " + connector.name() + " (" + skippedLines + " skipped)");
+				LogEvents.labelling().debug("processed " + processedLines + " lines of file " + connector.name() + " (" + skippedLines + " skipped)");
 			}
 			processedLines++;
 			String line = lines.nextLine();
@@ -41,7 +41,7 @@ public class Triples {
 				if(filter.matches(triple)) index.add(triple);
 				else skippedLines++;
 			}catch(Exception e){
-				Events.verbose().error("error processing " + connector.name(), e);
+				LogEvents.labelling().error("error processing " + connector.name(), e);
 			}
 		}
 	}

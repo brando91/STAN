@@ -45,7 +45,7 @@ public abstract class AbstractRMLProcessor implements RMLProcessor {
      * @return the location of the file or table
      */
     // Log
-	 private static LogEvents log = new LogEvents();
+	 private static LogEvents log = LogEvents.stan();
     /*protected String getIdentifier(LogicalSource ls) {
         return RMLEngine.getFileMap().getProperty(ls.getIdentifier());
     }*/

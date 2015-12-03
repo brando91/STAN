@@ -1,7 +1,6 @@
 package it.disco.unimib.labeller.tools;
 
 import it.disco.unimib.labeller.benchmark.Command;
-import it.disco.unimib.labeller.benchmark.Events;
 import it.disco.unimib.labeller.corpus.BulkWriteFile;
 import it.disco.unimib.labeller.corpus.TripleCorpus;
 import it.disco.unimib.labeller.index.AcceptAll;
@@ -9,6 +8,7 @@ import it.disco.unimib.labeller.index.EntityValues;
 import it.disco.unimib.labeller.index.InputFile;
 import it.disco.unimib.labeller.index.Triples;
 import it.disco.unimib.stan.core.EvaluationPaths;
+import it.disco.unimib.stan.core.LogEvents;
 
 import java.io.File;
 import java.util.concurrent.ExecutorService;
@@ -53,7 +53,7 @@ class RunCorpusConstruction{
 						output.flush();
 						analyzer.close();
 					} catch (Exception e) {
-						Events.verbose().error("processing file: " + file, e);
+						LogEvents.labelling().error("processing file: " + file, e);
 					}
 				}
 

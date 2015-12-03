@@ -1,11 +1,11 @@
 package it.disco.unimib.labeller.properties;
 
-import it.disco.unimib.labeller.benchmark.Events;
 import it.disco.unimib.labeller.index.CandidateProperty;
 import it.disco.unimib.labeller.index.ContextualizedValues;
 import it.disco.unimib.labeller.index.Index;
 import it.disco.unimib.labeller.index.ScaledDepths;
 import it.disco.unimib.labeller.index.SelectionCriterion;
+import it.disco.unimib.stan.core.LogEvents;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -77,9 +77,9 @@ public class DomainAndRangeConsistency implements AnnotationAlgorithm{
 	}
 
 	private void track(String what, String property, TypeDistribution domains) {
-		Events.simple().debug(property + " -- " + what);
+		LogEvents.labelling().debug(property + " -- " + what);
 		for(String domain : domains.all()){
-			Events.simple().debug(domain + "|" + domains.typeOccurrence(domain) + "|" + domains.propertyOccurrence() + "|" + domains.propertyOccurrenceForType(domain));
+			LogEvents.labelling().debug(domain + "|" + domains.typeOccurrence(domain) + "|" + domains.propertyOccurrence() + "|" + domains.propertyOccurrenceForType(domain));
 		}
 	}
 }

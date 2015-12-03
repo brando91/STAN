@@ -17,7 +17,7 @@ import org.openrdf.model.impl.URIImpl;
  */
 public class SimpleReferencePerformer extends NodeRMLPerformer {
     
-	private static LogEvents log = new LogEvents();
+	private static LogEvents log = LogEvents.stan();
 	private Resource subject;
     private URI predicate;
     

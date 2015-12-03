@@ -58,7 +58,7 @@ public class KarmaTextualAnnotator {
 	
 	public KarmaTextualAnnotator updateDocument(ArrayList<String> members) {
 		if(members.size() == 0){
-			new LogEvents().debug("@examples list cannot be empty.");
+			LogEvents.stan().debug("@examples list cannot be empty.");
 			return this;
 		}
 		
@@ -68,7 +68,7 @@ public class KarmaTextualAnnotator {
 		// making sure that the condition where the examples list is not empty
 		// but contains junk only is not accepted
 		if (cleanedExamples.size() == 0) {
-			new LogEvents().debug("@examples list contains forbidden characters only.");
+			LogEvents.stan().debug("@examples list contains forbidden characters only.");
 			return this;
 		}
 		
@@ -91,7 +91,7 @@ public class KarmaTextualAnnotator {
 		boolean savingSuccessful = false;
 		// running basic sanity checks in the input arguments
 		if (label == null || label.trim().length() == 0) {
-			new LogEvents().debug("@label argument cannot be null or an empty string.");
+			LogEvents.stan().debug("@label argument cannot be null or an empty string.");
 			return false;
 		}
 		
@@ -147,7 +147,7 @@ public class KarmaTextualAnnotator {
 		
 		// Sanity checks for arguments
 		if (examples == null || examples.size() == 0 || numPredictions <= 0) {
-			new LogEvents().debug("Invalid arguments. Possible problems: examples list size is zero, numPredictions is non-positive");
+			LogEvents.stan().debug("Invalid arguments. Possible problems: examples list size is zero, numPredictions is non-positive");
 			return result;
 		}
 
@@ -160,7 +160,7 @@ public class KarmaTextualAnnotator {
 		
 		try {
 			result = index.getTopK(numPredictions, sb.toString());
-			new LogEvents().debug("Got " + result.size() + " predictions");
+			LogEvents.stan().debug("Got " + result.size() + " predictions");
 			return result;
 		} catch (ParseException e) {
 			e.printStackTrace();

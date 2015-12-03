@@ -18,7 +18,7 @@ import org.openrdf.model.Value;
  */
 public class ConditionalJoinRMLPerformer extends NodeRMLPerformer{
     
-	private static LogEvents log = new LogEvents();
+	private static LogEvents log = LogEvents.stan();
 	private HashMap<String, String> conditions;
     private Resource subject;
     private URI predicate;

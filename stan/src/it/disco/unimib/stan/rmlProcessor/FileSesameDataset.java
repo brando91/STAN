@@ -53,7 +53,7 @@ import org.openrdf.rio.Rio;
 public class FileSesameDataset extends SesameDataSet {
 
     // Log
-	private static LogEvents log = new LogEvents();
+	private static LogEvents log = LogEvents.stan();
 	private File target;
     private BufferedWriter fw;
     private RDFWriter writer;

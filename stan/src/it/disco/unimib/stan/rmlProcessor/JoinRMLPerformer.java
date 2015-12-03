@@ -17,7 +17,7 @@ import org.openrdf.model.Value;
  */
 public class JoinRMLPerformer extends NodeRMLPerformer{
     
-	private static LogEvents log = new LogEvents();
+	private static LogEvents log = LogEvents.stan();
 	private Resource subject;
     private URI predicate;
 

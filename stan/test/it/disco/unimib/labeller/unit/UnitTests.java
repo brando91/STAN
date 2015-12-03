@@ -1,6 +1,6 @@
 package it.disco.unimib.labeller.unit;
 
-import it.disco.unimib.labeller.benchmark.Events;
+import it.disco.unimib.stan.core.LogEvents;
 
 import java.io.File;
 
@@ -21,6 +21,6 @@ public class UnitTests {
 		File logDirectory = new File("logs");
 		FileUtils.deleteQuietly(logDirectory);
 		logDirectory.mkdir();
-		Events.verbose();
+		LogEvents.labelling();
 	}
 }

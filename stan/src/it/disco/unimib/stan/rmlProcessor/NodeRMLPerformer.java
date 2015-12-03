@@ -16,7 +16,7 @@ import org.openrdf.model.Resource;
  */
 public class NodeRMLPerformer implements RMLPerformer{
     
-	private static LogEvents log = new LogEvents();
+	private static LogEvents log = LogEvents.stan();
     protected RMLProcessor processor;
 
     /**

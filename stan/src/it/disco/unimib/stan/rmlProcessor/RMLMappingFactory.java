@@ -47,7 +47,7 @@ import org.openrdf.rio.RDFParseException;
 public abstract class RMLMappingFactory {
 
     // Log
-	private static LogEvents log = new LogEvents();
+	private static LogEvents log = LogEvents.stan();
     // Value factory
     private static ValueFactory vf = new ValueFactoryImpl();
 

@@ -30,7 +30,7 @@ import org.openrdf.repository.RepositoryException;
 public class RMLEngine {
 
     // Log
-    private static LogEvents log = new LogEvents();
+    private static LogEvents log = LogEvents.stan();
     // A base IRI used in resolving relative IRIs produced by the R2RML mapping.
     //private static boolean source_properties;
     //Properties containing the identifiers for files

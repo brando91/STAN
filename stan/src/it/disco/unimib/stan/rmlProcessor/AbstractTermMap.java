@@ -48,7 +48,7 @@ import org.openrdf.model.Value;
 public abstract class AbstractTermMap implements TermMap {
 
         // Log
-	 	private static LogEvents log = new LogEvents();
+	 	private static LogEvents log = LogEvents.stan();
         private Value constantValue;
         private URI dataType; //MVS: Changed to resource, since XSD is to limited
         private TermType termType;

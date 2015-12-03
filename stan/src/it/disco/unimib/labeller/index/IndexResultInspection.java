@@ -1,7 +1,7 @@
 package it.disco.unimib.labeller.index;
 
-import it.disco.unimib.labeller.benchmark.Events;
 import it.disco.unimib.labeller.properties.TypeDistribution;
+import it.disco.unimib.stan.core.LogEvents;
 
 import java.util.ArrayList;
 
@@ -23,12 +23,12 @@ public class IndexResultInspection implements Index{
 	@Override
 	public CandidateResources get(ContextualizedValues request, Constraint query) throws Exception {
 		CandidateResources candidates = index.get(request, query);
-		Events.simple().debug("domain: " + request.domain() + " - value: " + request.first());
+		LogEvents.labelling().debug("domain: " + request.domain() + " - value: " + request.first());
 		for(CandidateProperty property : candidates.asList()){
-			Events.simple().debug(property.uri() + " - " + property.score());
-			Events.simple().debug(filter(property.domains()));
-			Events.simple().debug(filter(property.ranges()));
-			Events.simple().debug("-------------");
+			LogEvents.labelling().debug(property.uri() + " - " + property.score());
+			LogEvents.labelling().debug(filter(property.domains()));
+			LogEvents.labelling().debug(filter(property.ranges()));
+			LogEvents.labelling().debug("-------------");
 		}
 		return candidates;
 	}

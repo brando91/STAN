@@ -56,7 +56,7 @@ public class Handlers extends AbstractHandler {
 		PrintWriter writer = response.getWriter();
 		writer.write(pageFor);
 		
-		new LogEvents().info(base.getRemoteAddr() + "|" + 
+		LogEvents.stan().info(base.getRemoteAddr() + "|" + 
 							 base.getHeader("User-Agent") + "|" + 
 							 base.getMethod() + "|" + 
 							 url(path, base) +  "|" + 
@@ -78,7 +78,7 @@ public class Handlers extends AbstractHandler {
 		}
 		catch(Exception ex){
 			response.setStatus(500);
-			new LogEvents().error(ex.getMessage(), ex);
+			LogEvents.stan().error(ex.getMessage(), ex);
 			return errorPage(500, "An error occurred while serving the request. <br> " + ex);
 		}
 	}

@@ -1,8 +1,8 @@
 package it.disco.unimib.labeller.properties;
 
-import it.disco.unimib.labeller.benchmark.Events;
 import it.disco.unimib.labeller.index.ContextualizedValues;
 import it.disco.unimib.labeller.index.SelectionCriterion;
+import it.disco.unimib.stan.core.LogEvents;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -35,6 +35,6 @@ public class CandidatePropertiesReport implements Properties{
 	}
 
 	private void log(String header) {
-		Events.simple().debug(">" + header);
+		LogEvents.labelling().debug(">" + header);
 	}
 }

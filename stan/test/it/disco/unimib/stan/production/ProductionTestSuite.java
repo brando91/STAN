@@ -20,6 +20,6 @@ public class ProductionTestSuite {
 	public static void setLogging() throws Exception{
 		File logs = new File("logs");
 		FileUtils.forceMkdir(logs);
-		new LogEvents();
+		LogEvents.stan();
 	}
 }

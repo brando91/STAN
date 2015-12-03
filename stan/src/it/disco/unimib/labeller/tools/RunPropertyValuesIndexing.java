@@ -1,6 +1,5 @@
 package it.disco.unimib.labeller.tools;
 
-import it.disco.unimib.labeller.benchmark.Events;
 import it.disco.unimib.labeller.index.AcceptAll;
 import it.disco.unimib.labeller.index.EntityValues;
 import it.disco.unimib.labeller.index.Evidence;
@@ -9,6 +8,7 @@ import it.disco.unimib.labeller.index.InputFile;
 import it.disco.unimib.labeller.index.Triples;
 import it.disco.unimib.labeller.index.TypeHierarchy;
 import it.disco.unimib.stan.core.EvaluationPaths;
+import it.disco.unimib.stan.core.LogEvents;
 
 import java.io.File;
 import java.util.concurrent.ExecutorService;
@@ -43,7 +43,7 @@ public class RunPropertyValuesIndexing {
 					try {
 						new Triples(new InputFile(file)).fill(properties, new AcceptAll());
 					} catch (Exception e) {
-						Events.verbose().error("processing file: " + file, e);
+						LogEvents.labelling().error("processing file: " + file, e);
 					}
 				}
 			});

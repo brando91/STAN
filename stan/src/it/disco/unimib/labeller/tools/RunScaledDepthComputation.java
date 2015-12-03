@@ -1,11 +1,11 @@
 package it.disco.unimib.labeller.tools;
 
 import it.disco.unimib.labeller.benchmark.Command;
-import it.disco.unimib.labeller.benchmark.Events;
 import it.disco.unimib.labeller.corpus.BulkWriteFile;
 import it.disco.unimib.labeller.index.InputFile;
 import it.disco.unimib.labeller.index.ScaledDepthComputation;
 import it.disco.unimib.labeller.index.TypeHierarchy;
+import it.disco.unimib.stan.core.LogEvents;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -38,7 +38,7 @@ public class RunScaledDepthComputation {
 						new ScaledDepthComputation(taxonomy).persist(input, output);
 						output.flush();
 					} catch (Exception e) {
-						Events.verbose().error("processing file: " + file, e);
+						LogEvents.labelling().error("processing file: " + file, e);
 					}
 				}
 			});

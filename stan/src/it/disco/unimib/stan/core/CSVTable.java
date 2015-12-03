@@ -127,6 +127,6 @@ public class CSVTable{
 	}
 	
 	private void logError(String table, int row) {
-		new LogEvents().error("Error importing " + table + " at row " + row, null);
+		LogEvents.stan().error("Error importing " + table + " at row " + row, null);
 	}
 }

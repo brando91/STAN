@@ -21,6 +21,6 @@ public class TestSuite {
 		File logs = new File("logs");
 		FileUtils.deleteDirectory(logs);
 		FileUtils.forceMkdir(logs);
-		new LogEvents();
+		LogEvents.stan();
 	}
 }

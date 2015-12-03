@@ -3,6 +3,7 @@ package it.disco.unimib.labeller.benchmark;
 import it.disco.unimib.labeller.index.CandidateProperty;
 import it.disco.unimib.labeller.index.ContextualizedValues;
 import it.disco.unimib.labeller.properties.AnnotationAlgorithm;
+import it.disco.unimib.stan.core.LogEvents;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +29,7 @@ public class Benchmark {
 			Future<BenchmarkResult> future = executor.submit(new Callable<BenchmarkResult>() {
 				@Override
 				public BenchmarkResult call() throws Exception {
-					Events.verbose().debug("processing gold standard " + group.context() + " " + group.label());
+					LogEvents.labelling().debug("processing gold standard " + group.context() + " " + group.label());
 					String[] elements = group.elements().toArray(new String[group.elements().size()]);
 					return new BenchmarkResult(group, algorithm.annotate(new ContextualizedValues(group.context(), elements)));
 				}

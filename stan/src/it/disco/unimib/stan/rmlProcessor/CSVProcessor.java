@@ -23,7 +23,7 @@ import com.csvreader.CsvReader;
  */
 public class CSVProcessor extends AbstractRMLProcessor {
 
-	private static LogEvents log = new LogEvents();
+	private static LogEvents log = LogEvents.stan();
     private char getDelimiter(LogicalSource ls) {
         String d = RMLEngine.getFileMap().getProperty(ls.getIdentifier() + ".delimiter");
         if (d == null) {
