@@ -1,6 +1,6 @@
 package it.disco.unimib.labeller.index;
 
-import it.disco.unimib.labeller.corpus.OutputFile;
+import it.disco.unimib.labeller.tools.OutputFile;
 
 public class ScaledDepthComputation {
 

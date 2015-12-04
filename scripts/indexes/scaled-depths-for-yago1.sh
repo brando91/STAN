@@ -10,7 +10,7 @@ rm -rf ../../evaluation/labeller-indexes/yago1/depths
 
 ./scaled-depths.sh \
 taxonomy=../evaluation/yago1-type-tree/type-tree.nt \
-types=../evaluation/gold-standards/yago1-types \
+types=../evaluation/types/yago1-types \
 destination=../evaluation/labeller-indexes/yago1/depths
 
 cd ../../evaluation/labeller-indexes/yago1/depths

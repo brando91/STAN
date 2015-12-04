@@ -4,7 +4,7 @@ The web is full of high quality data in the form of tables that could be integra
 
 ## System Requirements
 
-* Linux (tested on Linux Mint 17 Qiana)
+* Linux OS
 * Git
 * Java
 * Eclipse (download at https://www.eclipse.org/downloads)
@@ -23,7 +23,6 @@ $ ./build-and-test.sh
 ```
 #!bash
 $ ./build-index.sh dbpedia
-$ ./build-index.sh yago1
 ```
 
 ## Run STAN

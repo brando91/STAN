@@ -12,6 +12,8 @@ infrastructure=$scripts/infrastructure
 indexes=$scripts/indexes
 kb=$1
 
+mkdir -p evaluation
+
 signal "Setting Up Environment"
 sudo apt-get update
 sudo apt-get install python python-pip bzip2 p7zip-full

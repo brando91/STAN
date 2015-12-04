@@ -4,8 +4,8 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
-import it.disco.unimib.labeller.corpus.BulkWriteFile;
 import it.disco.unimib.labeller.index.InputFile;
+import it.disco.unimib.labeller.tools.BulkWriteFile;
 
 import org.junit.After;
 import org.junit.Before;

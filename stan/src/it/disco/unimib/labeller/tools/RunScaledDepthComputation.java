@@ -1,6 +1,5 @@
 package it.disco.unimib.labeller.tools;
 
-import it.disco.unimib.labeller.corpus.BulkWriteFile;
 import it.disco.unimib.labeller.index.InputFile;
 import it.disco.unimib.labeller.index.ScaledDepthComputation;
 import it.disco.unimib.labeller.index.TypeHierarchy;

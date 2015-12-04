@@ -1,7 +1,7 @@
 package it.disco.unimib.labeller.unit;
 
-import it.disco.unimib.labeller.corpus.OutputFile;
 import it.disco.unimib.labeller.index.InputFile;
+import it.disco.unimib.labeller.tools.OutputFile;
 
 import java.util.ArrayList;
 import java.util.List;
