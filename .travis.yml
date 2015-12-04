@@ -1,3 +1,6 @@
+install:
+  - ./build-index.sh
+
 script:
   - ./build-and-test.sh
 

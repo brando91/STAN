@@ -5,8 +5,14 @@ The web is full of high quality data in the form of tables that could be integra
 ## Checking out the repository and configuring your local machine
 ```
 #!bash
-git clone https://github.com/brando91/STAN.git
-cd STAN
-./scripts/setup.sh
-./build-and-test.sh
+$ git clone https://github.com/brando91/STAN.git
+$ cd STAN
+$ ./build-and-test.sh
+```
+
+## Create the required indexes
+```
+#!bash
+$ ./build-index.sh dbpedia
+$ ./build-index.sh dbpedia
 ```

@@ -1,5 +1,9 @@
 #!/bin/bash
 
+function signal(){
+	echo "******* $1 *******"
+}
+
 set -e
 relative_path=`dirname $0`
 root=`cd $relative_path;pwd`
@@ -7,6 +11,11 @@ scripts=$root/scripts
 infrastructure=$scripts/infrastructure
 indexes=$scripts/indexes
 kb=$1
+
+signal "Setting Up Environment"
+sudo apt-get install python python-pip bzip2 p7zip-full
+sudo pip install rdflib
+signal "Done"
 
 cd $root
 
