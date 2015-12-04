@@ -13,6 +13,7 @@ indexes=$scripts/indexes
 kb=$1
 
 signal "Setting Up Environment"
+sudo apt-get update
 sudo apt-get install python python-pip bzip2 p7zip-full
 sudo pip install rdflib
 signal "Done"
