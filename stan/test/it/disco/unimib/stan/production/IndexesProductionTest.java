@@ -2,8 +2,8 @@ package it.disco.unimib.stan.production;
 
 import static org.hamcrest.Matchers.greaterThan;
 import static org.junit.Assert.assertThat;
-import it.disco.unimib.labeller.benchmark.EvaluationResources;
 import it.disco.unimib.stan.core.EvaluationPaths;
+import it.disco.unimib.stan.core.EvaluationResources;
 
 import java.io.File;
 

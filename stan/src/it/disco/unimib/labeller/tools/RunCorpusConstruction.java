@@ -1,6 +1,5 @@
 package it.disco.unimib.labeller.tools;
 
-import it.disco.unimib.labeller.benchmark.Command;
 import it.disco.unimib.labeller.corpus.BulkWriteFile;
 import it.disco.unimib.labeller.corpus.TripleCorpus;
 import it.disco.unimib.labeller.index.AcceptAll;

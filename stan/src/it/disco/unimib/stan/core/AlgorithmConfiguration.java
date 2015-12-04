@@ -1,6 +1,5 @@
 package it.disco.unimib.stan.core;
 
-import it.disco.unimib.labeller.benchmark.EvaluationResources;
 import it.disco.unimib.labeller.index.Index;
 import it.disco.unimib.labeller.index.IndexFields;
 import it.disco.unimib.labeller.index.ScaledDepths;

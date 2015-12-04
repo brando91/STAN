@@ -5,7 +5,7 @@ import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
-import it.disco.unimib.labeller.benchmark.CommandLineArguments;
+import it.disco.unimib.labeller.tools.CommandLineArguments;
 
 import org.junit.Test;
 
