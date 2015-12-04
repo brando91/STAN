@@ -113,7 +113,7 @@ public class WebUser {
 	}
 
 	public WebUser waitForElementToShow(String element) throws Exception {
-		for(int i = 0; i < 20; i++){
+		for(int i = 0; i < 60; i++){
 			if(pageContent().contains(element)){
 				return this;
 			}
