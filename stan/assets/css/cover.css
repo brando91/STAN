@@ -142,6 +142,9 @@ h1.cover-heading{
   color: rgba(255,255,255,.5);
 }
 
+.github{
+	color: rgba(255, 255, 255, 0.5);
+}
 
 /*
  * Affix and center

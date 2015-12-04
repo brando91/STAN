@@ -11,6 +11,7 @@ home(notifications, hasPrevious, content) ::= <<
 	    <link href="/assets/css/jasny-bootstrap.min.css" rel="stylesheet">
 	    <link href="/assets/css/cover.css" rel="stylesheet">
 	    
+	    
 	    <script src="/assets/js/jquery-1.11.3.min.js"></script>
 	    <script src="/assets/js/bootstrap.min.js"></script>
 	</head>
@@ -49,7 +50,7 @@ home(notifications, hasPrevious, content) ::= <<
 
           <div class="mastfoot">
             <div class="inner">
-              <p>Semantic Table Annotation Tool © 2015 | Free source at <a href="https://github.com/brando91/STAN" target="_blank"><img src="/assets/img/github.png"></a></p>
+              <p>Semantic Table Annotation Tool © 2015 | <a class="github" href="https://github.com/brando91/STAN" target="_blank">Fork me on GitHub <img src="/assets/img/github.png"></a></p>
             </div>
           </div>
 
