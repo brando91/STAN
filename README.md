@@ -2,6 +2,15 @@
 
 The web is full of high quality data in the form of tables that could be integrated to generate new knowledge. However web tables are often lacking in semantics. A crucial problem is the correct relationships detection between a table and an ontology in order to define the semantics. In this context STAN is a tool for semi-automatic semantic annotation of tables that lets non technicians carry out the annotation process. 
 
+## System Requirements
+
+* Linux (tested on Linux Mint 17 Qiana)
+* Git
+* Java
+* Eclipse (download at https://www.eclipse.org/downloads)
+* 50GB available disk space
+* 4GB memory
+
 ## Checking out the repository and configuring your local machine
 ```
 #!bash
@@ -14,5 +23,12 @@ $ ./build-and-test.sh
 ```
 #!bash
 $ ./build-index.sh dbpedia
-$ ./build-index.sh dbpedia
+$ ./build-index.sh yago1
+```
+
+## Run STAN
+```
+#!bash
+$ ./launch-stan.sh
+Open a browser at http://localhost:8081
 ```
