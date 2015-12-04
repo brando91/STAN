@@ -7,8 +7,10 @@ function signal(){
 set -e
 relative_path=`dirname $0`
 root=`cd $relative_path/../../;pwd`
+evaluation=$root/evaluation
+tools=$root/tools
 
-cd $root/evaluation
+cd $evaluation
 
 signal "Setting Up Evaluation Infrastructure for DBPedia"
 if [ ! -d "dbpedia-type-tree" ]; then
@@ -16,9 +18,9 @@ if [ ! -d "dbpedia-type-tree" ]; then
 	cd dbpedia-type-tree
 	wget "http://downloads.dbpedia.org/3.9/dbpedia_3.9.owl.bz2"
 	bunzip2 dbpedia_3.9.owl.bz2
-	cd ../tools
+	cd $tools
 	./download-ontology.py "../dbpedia-type-tree/dbpedia_3.9.owl" "../dbpedia-type-tree/dbpedia_3.9.nt"
-	cd ../dbpedia-type-tree
+	cd $evaluation/dbpedia-type-tree
 	rm dbpedia_3.9.owl
 	grep "http://www.w3.org/2000/01/rdf-schema#subClassOf" dbpedia_3.9.nt > type-tree.nt
 	rm dbpedia_3.9.nt
@@ -61,9 +63,9 @@ if [ ! -d "dbpedia-labels" ]; then
 	bunzip2 category_labels_en.nt.bz2
 	wget "http://downloads.dbpedia.org/3.9/dbpedia_3.9.owl.bz2"
 	bunzip2 dbpedia_3.9.owl.bz2
-	cd ../tools
+	cd $tools
 	./download-ontology.py "../dbpedia-labels/dbpedia_3.9.owl" "../dbpedia-labels/dbpedia_3.9.nt"
-	cd ../dbpedia-labels
+	cd $evaluation/dbpedia-labels
 	rm dbpedia_3.9.owl
 	grep "@en" dbpedia_3.9.nt > dbpedia_3.9-en.nt
 	rm dbpedia_3.9.nt
