@@ -11,10 +11,6 @@ project=$root/stan
 
 cd $root
 
-signal 'Updating the Repository'
-git pull
-signal 'Done'
-
 scripts/build.sh
 
 cd $project

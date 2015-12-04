@@ -1,3 +1,5 @@
+sudo: required
+
 install:
   - ./build-index.sh
 
