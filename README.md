@@ -9,9 +9,9 @@ The web is full of high quality data in the form of tables that could be integra
 * Java
 * Eclipse (download at https://www.eclipse.org/downloads)
 * 50GB available disk space
-* 4GB memory
+* 4GB memory required (8GB advised)
 
-## Checking out the repository and configuring your local machine
+## Check out the repository and configure your local machine
 ```
 #!bash
 $ git clone https://github.com/brando91/STAN.git
@@ -19,11 +19,12 @@ $ cd STAN
 $ ./build-and-test.sh
 ```
 
-## Create the required indexes
+## Create the required index
 ```
 #!bash
 $ ./build-index.sh dbpedia
 ```
+This will take around 7 hours to complete.
 
 ## Run STAN
 ```
