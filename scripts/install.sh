@@ -9,10 +9,10 @@ code=$root/$service
 
 echo "******* Installing STAN *******"
 sudo cp $code/$service /etc/init.d
-sudo update-rc.d $service defaults
+update-rc.d $service defaults
 sudo service $service stop
 ./scripts/build.sh
-sudo chmod -R 777 $code
+chmod -R 777 $code
 sudo service $service start
 $code/production-test.sh
 echo "******* Done *******"

@@ -10,4 +10,4 @@ root=`cd $relative_path;pwd`
 cd $root
 
 signal "Running Production Tests"
-java -cp .:'stan.jar' org.junit.runner.JUnitCore production.ProductionTestSuite
+java -cp .:'stan.jar' org.junit.runner.JUnitCore it.disco.unimib.stan.production.ProductionTestSuite
