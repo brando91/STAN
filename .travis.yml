@@ -6,3 +6,5 @@ install:
 script:
   - ./build-and-test.sh
 
+after_success:
+  - ./scripts/deploy/install.sh

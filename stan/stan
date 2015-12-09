@@ -15,7 +15,7 @@ pid=/var/run/stan.pid
 case "$1" in
         start)
                 log_begin_msg "Starting stan service"
-                start-stop-daemon --start --background --exec "/usr/bin/java" -m --pidfile "$pid" -d "/home/srv/STAN/stan" -- -Xms256m -Xmx8000m -cp .:"stan.jar" it.disco.unimib.stan.main.StartWebApplication
+                start-stop-daemon --start --background --exec "/usr/bin/java" -m --pidfile "$pid" -d "/opt/stan" -- -Xms256m -Xmx8000m -cp .:"stan.jar" it.disco.unimib.stan.main.StartWebApplication
                 status=$?
 		log_end_msg $status
                 ;;
