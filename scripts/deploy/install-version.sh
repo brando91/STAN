@@ -12,7 +12,7 @@ service=stan
 todeploy=$root/todeploy/$version
 code=/opt/$service
 
-signal "Installing STAN"
+signal "Installing $version"
 ls -d $code/* | grep -v -e logs -e working-area | sudo xargs rm -rf
 sudo mkdir -p $code/logs
 sudo mkdir -p $code/working-area
