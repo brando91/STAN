@@ -113,11 +113,11 @@ public class WebUser {
 	}
 
 	public WebUser waitForElementToShow(String element) throws Exception {
-		for(int i = 0; i < 30; i++){
+		for(int i = 0; i < 60; i++){
 			if(pageContent().contains(element)){
 				return this;
 			}
-			browser.waitForBackgroundJavaScript(1000);
+			browser.waitForBackgroundJavaScript(500);
 		}
 		throw new Exception("'" + element + "' not found.");
 	}
