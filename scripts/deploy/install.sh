@@ -19,7 +19,7 @@ sudo mkdir -p $code/working-area
 sudo cp -R $todeploy/*  $code/
 sudo chmod -R 777 $code
 sudo mv $code/$service /etc/init.d
-update-rc.d $service defaults
+sudo update-rc.d $service defaults
 sudo service $service stop
 sudo service $service start
 echo "******* Done *******"
