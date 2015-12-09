@@ -1,5 +1,6 @@
 package it.disco.unimib.stan.unit;
 
+import it.disco.unimib.stan.core.Environment;
 import it.disco.unimib.stan.webapp.WebApplication;
 
 import org.junit.After;
@@ -41,7 +42,7 @@ public class WebUnitTest {
 	}
 	
 	protected int applicationPort() {
-		return 8090;
+		return new Environment().debugPort();
 	}
 	
 	private void noLogging() {

@@ -33,7 +33,7 @@ public class WebDeploymentTest {
 	}
 	
 	protected int applicationPort() throws IOException {
-		return new Environment().getPort();
+		return new Environment().productionPort();
 	}
 	
 	private void noLogging() {

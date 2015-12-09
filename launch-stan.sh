@@ -11,4 +11,4 @@ project=$root/stan
 
 signal "STAN server is listening on http://localhost:8081/"
 cd $project
-java -Xms256m -Xmx8000m -cp stan.jar it.disco.unimib.stan.main.StartWebApplication &> /dev/null
+java -Xms256m -Xmx8000m -cp stan.jar it.disco.unimib.stan.main.StartLocalApplication &> /dev/null

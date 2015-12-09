@@ -13,8 +13,8 @@ cd $root
 
 echo "******* Installing STAN *******"
 ls -d $code/* | grep -v -e logs -e working-area | sudo xargs rm -rf
-sudo mkdir -p $code
-sudo mkdir -p $code/logs
+sudo mkdir -p $code/logs/labelling
+sudo mkdir -p $code/logs/stan
 sudo mkdir -p $code/working-area
 sudo cp -R $todeploy/*  $code/
 sudo chmod -R 777 $code
