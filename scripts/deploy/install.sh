@@ -1,25 +1,12 @@
 #!/bin/bash
+
 set -e
 relative_path=`dirname $0`
 root=`cd $relative_path/../../;pwd`
-
+deploy=$root/scripts/deploy
 service=stan
 now=$(date +%s)
-todeploy=$root/todeploy/$service-$now
-code=/opt/$service
 
-cd $root
-./scripts/deploy/release.sh $service-$now
-
-echo "******* Installing STAN *******"
-ls -d $code/* | grep -v -e logs -e working-area | sudo xargs rm -rf
-sudo mkdir -p $code/logs
-sudo mkdir -p $code/working-area
-sudo cp -R $todeploy/*  $code/
-sudo chmod -R 777 $code
-sudo mv $code/$service /etc/init.d
-sudo update-rc.d $service defaults
-sudo service $service stop
-sudo service $service start
-sudo $code/production-test.sh
-echo "******* Done *******"
+cd $deploy
+./release.sh $service-$now
+./install-version.sh $service-$now
