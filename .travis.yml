@@ -5,11 +5,8 @@ install:
 
 script:
   - ./build-and-test.sh
-
-after_success:
   - sudo mkdir -p /opt/evaluation/labeller-indexes/dbpedia/properties
   - sudo mkdir -p /opt/evaluation/labeller-indexes/dbpedia/depths
   - sudo mkdir -p /opt/evaluation/labeller-indexes/dbpedia-domains
   - sudo mkdir -p /opt/evaluation/labeller-indexes/dbpedia-ranges
-  - sudo touch /opt/evaluation/labeller-indexes/dbpedia/properties/any
   - ./scripts/deploy/install.sh

@@ -13,8 +13,7 @@ cd $root
 
 echo "******* Installing STAN *******"
 ls -d $code/* | grep -v -e logs -e working-area | sudo xargs rm -rf
-sudo mkdir -p $code/logs/labelling
-sudo mkdir -p $code/logs/stan
+sudo mkdir -p $code/logs
 sudo mkdir -p $code/working-area
 sudo cp -R $todeploy/*  $code/
 sudo chmod -R 777 $code
@@ -22,5 +21,5 @@ sudo mv $code/$service /etc/init.d
 sudo update-rc.d $service defaults
 sudo service $service stop
 sudo service $service start
-$code/production-test.sh
+sudo $code/production-test.sh
 echo "******* Done *******"
