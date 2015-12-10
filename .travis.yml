@@ -1,7 +1,7 @@
 sudo: required
 
 install:
-  - ./build-index.sh
+  - ./stan/scripts/build-index.sh
 
 script:
   - ./build-and-test.sh

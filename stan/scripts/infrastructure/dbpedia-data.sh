@@ -6,9 +6,9 @@ function signal(){
 
 set -e
 relative_path=`dirname $0`
-root=`cd $relative_path/../../;pwd`
+root=`cd $relative_path/../../../;pwd`
 evaluation=$root/evaluation
-tools=$root/tools
+infrastructure=$relative_path
 
 cd $evaluation
 
@@ -18,8 +18,8 @@ if [ ! -d "dbpedia-type-tree" ]; then
 	cd dbpedia-type-tree
 	wget "http://downloads.dbpedia.org/3.9/dbpedia_3.9.owl.bz2"
 	bunzip2 dbpedia_3.9.owl.bz2
-	cd $tools
-	./download-ontology.py "../evaluation/dbpedia-type-tree/dbpedia_3.9.owl" "../evaluation/dbpedia-type-tree/dbpedia_3.9.nt"
+	cd $infrastructure
+	./download-ontology.py "$evaluation/dbpedia-type-tree/dbpedia_3.9.owl" "$evaluation/dbpedia-type-tree/dbpedia_3.9.nt"
 	cd $evaluation/dbpedia-type-tree
 	rm dbpedia_3.9.owl
 	grep "http://www.w3.org/2000/01/rdf-schema#subClassOf" dbpedia_3.9.nt > type-tree.nt
@@ -63,8 +63,8 @@ if [ ! -d "dbpedia-labels" ]; then
 	bunzip2 category_labels_en.nt.bz2
 	wget "http://downloads.dbpedia.org/3.9/dbpedia_3.9.owl.bz2"
 	bunzip2 dbpedia_3.9.owl.bz2
-	cd $tools
-	./download-ontology.py "../evaluation/dbpedia-labels/dbpedia_3.9.owl" "../evaluation/dbpedia-labels/dbpedia_3.9.nt"
+	cd $infrastructure
+	./download-ontology.py "$evaluation/dbpedia-labels/dbpedia_3.9.owl" "$evaluation/dbpedia-labels/dbpedia_3.9.nt"
 	cd $evaluation/dbpedia-labels
 	rm dbpedia_3.9.owl
 	grep "@en" dbpedia_3.9.nt > dbpedia_3.9-en.nt

@@ -6,12 +6,13 @@ function signal(){
 
 set -e
 relative_path=`dirname $0`
-root=`cd $relative_path;pwd`
-scripts=$root/scripts
+root=`cd $relative_path/../..;pwd`
+scripts=$root/stan/scripts
 infrastructure=$scripts/infrastructure
 indexes=$scripts/indexes
 kb=$1
 
+cd $root
 mkdir -p evaluation
 
 signal "Setting Up Environment"
@@ -19,8 +20,6 @@ sudo apt-get update
 sudo apt-get install python python-pip bzip2 p7zip-full
 sudo pip install rdflib
 signal "Done"
-
-cd $root
 
 if [[ $kb == dbpedia ]]
 then

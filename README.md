@@ -22,7 +22,7 @@ $ ./build-and-test.sh
 ## Create the required index
 ```
 #!bash
-$ ./build-index.sh dbpedia
+$ ./stan/scripts/build-index.sh dbpedia
 ```
 This will take around 7 hours to complete.
 

@@ -15,8 +15,8 @@ cp $project/stan $todeploy
 cp $project/stan.jar $todeploy
 cp -r $project/templates $todeploy
 cp -r $project/assets $todeploy
+cp -r $project/scripts $todeploy
 cp $project/log4j.properties $todeploy
-cp $project/*.sh $todeploy
 echo $release "$(date)" > $todeploy/version
 chmod 775 -R $todeploy
 echo "******* Done *******"

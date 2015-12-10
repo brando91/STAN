@@ -22,5 +22,5 @@ sudo mv $code/$service /etc/init.d
 sudo update-rc.d $service defaults
 sudo service $service stop
 sudo service $service start
-sudo $code/production-test.sh
+sudo $code/scripts/production-test.sh
 signal "Done"
