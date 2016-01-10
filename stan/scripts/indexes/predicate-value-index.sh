@@ -10,8 +10,6 @@ root=`cd $relative_path/../../../;pwd`
 project=$root/stan
 
 cd $root
-./scripts/build.sh
-
 mkdir -p evaluation/labeller-indexes/$2
 
 signal "Building Property Index for dataset $1 in $2 with $3 and $4"

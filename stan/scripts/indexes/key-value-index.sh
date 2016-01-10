@@ -10,8 +10,6 @@ root=`cd $relative_path/../../../;pwd`
 project=$root/stan
 
 cd $root
-./scripts/build.sh
-
 mkdir -p evaluation/labeller-indexes/$2
 
 signal "Building $3 Index in $2 for $1"
