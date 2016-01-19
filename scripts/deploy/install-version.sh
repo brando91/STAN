@@ -11,8 +11,14 @@ version=$1
 service=stan
 todeploy=$root/todeploy/$version
 code=/opt/$service
+evaluation=/opt/evaluation
 
 signal "Installing $version"
+sudo mkdir -p $evaluation
+sudo chmod -R 777 $evaluation
+sudo rm -rf $evaluation/types
+sudo cp -r $root/evaluation/types $evaluation
+
 ls -d $code/* | grep -v -e logs -e working-area | sudo xargs rm -rf
 sudo mkdir -p $code/logs
 sudo mkdir -p $code/working-area
