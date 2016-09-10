@@ -12,7 +12,7 @@ import it.disco.unimib.stan.core.WorkingAreaPaths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SuggestionsPage implements ApplicationHandler {
+public class SuggestionsPage implements Page {
 
 	@Override
 	public String route() {

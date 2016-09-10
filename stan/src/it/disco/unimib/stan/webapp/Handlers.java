@@ -21,13 +21,14 @@ import org.eclipse.jetty.server.handler.AbstractHandler;
 @MultipartConfig
 public class Handlers extends AbstractHandler {
 	
-	private ApplicationHandler[] pages;
+	private Page[] pages;
 	
 	public Handlers() throws Exception {
-		this.pages = new ApplicationHandler[]{
+		this.pages = new Page[]{
 				new HomePage(),
 				new StartPage(),
 				new AlivePage(),
+				new ContactsPage(),
 				new UploadTablePage(),
 				new UploadTableFromUrlPage(),
 				new AnnotationPage(),
@@ -67,7 +68,7 @@ public class Handlers extends AbstractHandler {
 		try{
 			String page = errorPage(404, "Page not found.");
 			response.setStatus(404);
-			for(ApplicationHandler handler : this.pages){
+			for(Page handler : this.pages){
 				if(path.matches("/" + handler.route())){
 					response.setStatus(200);
 					page = handler.process(new ServerCommunication(request, response));

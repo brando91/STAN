@@ -4,7 +4,7 @@ import it.disco.unimib.stan.core.WorkingAreaPaths;
 
 import java.io.File;
 
-public class ExportTriplesPage implements ApplicationHandler {
+public class ExportTriplesPage implements Page {
 
 	@Override
 	public String route() {

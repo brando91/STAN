@@ -7,7 +7,7 @@ import org.apache.commons.io.FileUtils;
 import org.junit.Before;
 
 
-public class AlivePage implements ApplicationHandler{
+public class AlivePage implements Page{
 
 	File version = new File("./version");
 	

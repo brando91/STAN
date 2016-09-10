@@ -60,6 +60,11 @@ img.loading {
 	margin-bottom: 60px;
 }
 
+img.img-center{
+	margin: 0 auto;
+	height: 200px;
+}
+
 p.loading {
 	height: 40px;
 	text-align: center;

@@ -1,7 +1,7 @@
 package it.disco.unimib.stan.webapp;
 
 
-public interface ApplicationHandler {
+public interface Page {
 
 	String route();
 	

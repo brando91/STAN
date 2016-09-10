@@ -1,7 +1,7 @@
 package it.disco.unimib.stan.webapp;
 
 
-public class SaveStatusPage implements ApplicationHandler {
+public class SaveStatusPage implements Page {
 
 	@Override
 	public String route() {

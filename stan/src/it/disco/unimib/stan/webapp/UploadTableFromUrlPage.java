@@ -7,7 +7,7 @@ import java.net.URL;
 
 import org.apache.commons.io.FileUtils;
 
-public class UploadTableFromUrlPage implements ApplicationHandler {
+public class UploadTableFromUrlPage implements Page {
 
 	@Override
 	public String route() {
