@@ -9,7 +9,7 @@ public class ContactsPage implements Page {
 
 	@Override
 	public String process(Communication requestAndResponse) throws Exception {
-		return "";
+		return new Template("contacts").breadcrumb("Contacts").page();
 	}
 
 }

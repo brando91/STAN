@@ -4,11 +4,11 @@ import static org.hamcrest.Matchers.containsString;
 import static org.junit.Assert.assertThat;
 import it.disco.unimib.stan.webapp.ContactsPage;
 
-import org.junit.Ignore;
+import org.junit.Test;
 
 public class ContactsPageTest {
 
-	@Ignore
+	@Test
 	public void containsTeam() throws Exception {
 		
 		String page = new ContactsPage().process(new CommunicationTestDouble());

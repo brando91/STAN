@@ -15,6 +15,7 @@ header() ::= <<
 		    <link href="/assets/css/jasny-bootstrap.min.css" rel="stylesheet">
 		    <link href="/assets/css/style.css" rel="stylesheet">
 		    <link href="/assets/css/bootstrap-table.css" rel="stylesheet">
+		    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
 		    
 		    <script src="/assets/js/jquery-1.11.3.min.js"></script>
 		    <script src="/assets/js/jquery-ui.min.js"></script>
