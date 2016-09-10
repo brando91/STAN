@@ -11,7 +11,7 @@ contacts(notifications, breadcrumb) ::= <<
 	            </div>
 	            
 	            <div class="col-lg-4 col-sm-6 text-center">
-	                <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
+	                <img class="img-responsive img-center" src="/assets/img/brando_preda.jpg" alt="Brando Preda">
 	                <h3>
 	                	Brando Preda<br>
 	                    <small>Software Developer</small>
@@ -31,7 +31,7 @@ contacts(notifications, breadcrumb) ::= <<
 	            </div>
 	            
 	            <div class="col-lg-4 col-sm-6 text-center">
-	                <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
+	                <img class=" img-responsive img-center" src="/assets/img/riccardo_porrini.png" alt="Riccardo Porrini">
 	                <h3>
 	                	Riccardo Porrini<br>
 	                    <small>PhD Student & Software Developer</small>
@@ -51,7 +51,7 @@ contacts(notifications, breadcrumb) ::= <<
 	            </div>
 	            
 	            <div class="col-lg-4 col-sm-6 text-center">
-	                <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
+	                <img class=" img-responsive img-center" src="/assets/img/matteo_palmonari.jpg" alt="Matteo Palmonari">
 	                <h3>
 	                	Matteo Palmonari<br>
 	                    <small>Assistant Professor</small>

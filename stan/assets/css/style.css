@@ -62,6 +62,7 @@ img.loading {
 
 img.img-center{
 	margin: 0 auto;
+	height: 200px;
 }
 
 p.loading {
