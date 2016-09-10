@@ -7,7 +7,7 @@ import it.disco.unimib.stan.core.StanAnnotator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AnnotationApiPage implements ApplicationHandler {
+public class AnnotationApiPage implements Page {
 
 	@Override
 	public String route() {

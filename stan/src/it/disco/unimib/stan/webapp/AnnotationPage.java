@@ -8,7 +8,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
 
-public class AnnotationPage implements ApplicationHandler {
+public class AnnotationPage implements Page {
 
 	@Override
 	public String route() {

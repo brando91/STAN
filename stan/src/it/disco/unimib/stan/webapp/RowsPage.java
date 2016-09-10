@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class RowsPage implements ApplicationHandler {
+public class RowsPage implements Page {
 
 	@Override
 	public String route() {

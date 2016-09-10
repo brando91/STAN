@@ -1,6 +1,6 @@
 package it.disco.unimib.stan.webapp;
 
-public class StartPage implements ApplicationHandler {
+public class StartPage implements Page {
 
 	@Override
 	public String route() {

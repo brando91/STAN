@@ -1,7 +1,7 @@
 package it.disco.unimib.stan.webapp;
 
 
-public class ExportMappingsPage implements ApplicationHandler {
+public class ExportMappingsPage implements Page {
 
 	@Override
 	public String route() {

@@ -1,7 +1,7 @@
 package it.disco.unimib.stan.webapp;
 
 
-public class SaveSettedNamespacePage implements ApplicationHandler {
+public class SaveSettedNamespacePage implements Page {
 
 	@Override
 	public String route() {

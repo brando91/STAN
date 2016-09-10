@@ -10,7 +10,7 @@ import it.disco.unimib.stan.core.SemanticAnnotation;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class KarmaAnnotationPage implements ApplicationHandler{
+public class KarmaAnnotationPage implements Page{
 
 	private KarmaTextualAnnotator textualAnnotator;
 	private KarmaNumericAnnotator numericAnnotator;

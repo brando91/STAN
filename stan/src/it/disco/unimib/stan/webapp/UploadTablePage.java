@@ -2,7 +2,7 @@ package it.disco.unimib.stan.webapp;
 
 import it.disco.unimib.stan.core.WorkingAreaPaths;
 
-public class UploadTablePage implements ApplicationHandler {
+public class UploadTablePage implements Page {
 
 	@Override
 	public String route() {
