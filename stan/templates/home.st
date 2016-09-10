@@ -31,6 +31,7 @@ home(notifications, hasPrevious, content) ::= <<
                   $if(hasPrevious)$<li><a href="/annotation">Resume</a></li>$endif$
                   <li><a href="/start">New Project</a></li>
                   <li><a href="https://github.com/brando91/STAN" target="_blank">Source code</a></li>
+                  <li><a href="/contacts">Contacts</a></li>
                 </ul>
               </nav>
             </div>
